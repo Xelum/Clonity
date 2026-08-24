@@ -1,7 +1,7 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js';
 import {PORTRAITS} from './portraits.js?v=20260824-37';
 import {HAIR_PORTRAITS} from './portrait-variants.js?v=20260824-37';
-import {MODULAR_PARTS} from './modular-assets.js?v=20260824-40';
+import {MODULAR_PARTS} from './modular-assets.js?v=20260824-42';
 import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signInWithPopup,GoogleAuthProvider,sendPasswordResetEmail,sendEmailVerification,updateProfile,signOut} from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js';
 import {getFirestore,doc,getDoc,setDoc,deleteDoc,serverTimestamp} from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js';
 
