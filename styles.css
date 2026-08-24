@@ -213,3 +213,33 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 .v40-freckles{display:none;position:absolute;z-index:7;left:37%;top:47%;width:26%;height:6%;background-image:radial-gradient(circle,#744634 0 1.3px,transparent 1.8px);background-size:11px 8px;opacity:.68}.v40-freckles.light,.v40-freckles.many{display:block}.v40-freckles.many{left:33%;width:34%;background-size:8px 7px;opacity:.88}
 @keyframes v40PartIn{from{opacity:0}to{opacity:1}}
 @media(max-width:760px){.modular-face-v40{inset:0 -4%}.v40-part.eyes{top:30%}.v40-part.hair{top:2%}}
+
+
+/* Face Lab v42 — tela quadrata stabile e livelli allineati alla base pulita. */
+.modular-face-v40{
+  inset:auto;
+  left:50%;
+  top:50%;
+  width:min(100%,510px);
+  height:auto;
+  aspect-ratio:1;
+  overflow:hidden;
+  transform:translate(-50%,-50%);
+  transform-origin:50% 43%;
+}
+.modular-face-v40.face-round{transform:translate(-50%,-50%) scaleX(1.055)}
+.modular-face-v40.face-square{transform:translate(-50%,-50%) scaleX(1.09)}
+.modular-face-v40.face-heart{transform:translate(-50%,-50%) scaleX(.97)}
+.modular-face-v40.face-long{transform:translate(-50%,-50%) scaleX(.92)}
+.v40-base{object-fit:contain}
+.v40-skin{opacity:.3}
+.v40-part.ears{left:23%;top:30%;width:54%;height:18%}
+.v40-part.eyes{left:31%;top:30%;width:38%;height:12%}
+.v40-part.brows{left:31%;top:25%;width:38%;height:9%}
+.v40-part.nose{left:42%;top:38%;width:16%;height:18%}
+.v40-part.mouth{left:38%;top:53%;width:24%;height:11%}
+.v40-part.hair{left:20%;top:1%;width:60%;height:43%}
+@media(max-width:760px){
+  .modular-face-v40{width:min(100%,430px)}
+  .avatar-stage.face-stage{min-height:420px}
+}
