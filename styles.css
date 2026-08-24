@@ -135,3 +135,9 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 .face-stage .avatar-2d{position:absolute;inset:0}
 @keyframes portraitIn{from{opacity:.3;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
 @media(max-width:760px){.avatar-2d .clone-portrait{width:min(94%,330px);height:86%}.avatar-2d .human-help{top:12px;font-size:7px}.face-stage{background:radial-gradient(circle at 50% 22%,#5876e9,#162f68 44%,#06142f 85%)}}
+
+/* Portrait engine v2 — inquadratura editoriale, non cartoon */
+.avatar-2d .portrait-v2{width:min(82%,350px);height:86%;overflow:visible;filter:saturate(.9) contrast(1.015)}
+.avatar-2d .portrait-v2~.human-help{padding:9px 14px;border:1px solid rgba(255,255,255,.1);background:rgba(4,20,48,.66);box-shadow:0 8px 24px rgba(0,0,0,.14);font-size:7px;letter-spacing:.13em}
+.face-stage{background:radial-gradient(circle at 50% 29%,#5872d9 0,#264789 34%,#102a5d 63%,#06142f 100%)}
+@media(max-width:760px){.avatar-2d .portrait-v2{width:min(82%,290px);height:84%}}
