@@ -160,3 +160,16 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 .portrait-sheen{position:absolute;inset:7% 16% 25%;border-radius:45%;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,.12),transparent 30% 72%,rgba(4,14,40,.08));mix-blend-mode:soft-light}
 .premium-engine .human-help{z-index:5}.premium-engine:after{opacity:.35}
 @media(max-width:760px){.premium-portrait{inset:7% 3% 0}.portrait-tint.skin{clip-path:ellipse(29% 30% at 50% 43%)}}
+
+/* Portrait composer v37: ogni comando agisce su un livello visivo separato. */
+.premium-portrait{clip-path:ellipse(46% 52% at 50% 48%);--eye-left:41%;--eye-right:59%;--eye-y:35%;--brow-y:30.5%}
+.premium-portrait.kind-female{--eye-left:40%;--eye-right:60%;--eye-y:34%;--brow-y:29.2%}
+.premium-portrait.kind-neutral{--eye-left:41%;--eye-right:59%;--eye-y:37%;--brow-y:32.7%}
+.portrait-tint.skin{opacity:.5;mix-blend-mode:color;clip-path:ellipse(28% 31% at 50% 43%)}
+.eye-tint{width:4.4%;background:radial-gradient(circle at 38% 34%,rgba(255,255,255,.9) 0 8%,#111 10% 22%,var(--eye-tint) 25% 72%,#171717 75%);opacity:.98;mix-blend-mode:normal;box-shadow:0 0 0 1px rgba(25,20,18,.35),inset 0 0 3px rgba(255,255,255,.5)}
+.brow-tint{height:1.6%;opacity:.92;mix-blend-mode:normal;transition:.25s}
+.brows-straight .brow-tint{border-radius:20%;height:1.25%;--brow-angle:0deg}.brows-arched .brow-tint{height:2%;clip-path:polygon(0 75%,45% 5%,100% 65%,100% 100%,45% 40%,0 100%)}.brows-bold .brow-tint{height:2.25%;width:11.5%}
+.nose-detail{position:absolute;left:50%;top:42%;width:2.2%;height:8.5%;border-right:2px solid rgba(91,48,38,.5);border-bottom:2px solid rgba(91,48,38,.38);border-radius:0 0 65% 45%;transform:translateX(-50%);transition:.25s}.nose-small .nose-detail{transform:translateX(-50%) scale(.72)}.nose-defined .nose-detail{transform:translateX(-50%) scale(1.08,1.25);border-width:3px}.nose-wide .nose-detail{width:4.2%;border-radius:0 0 80% 70%}
+.mouth-detail{position:absolute;left:50%;top:55.2%;width:12%;height:2.7%;transform:translateX(-50%);border-bottom:2px solid rgba(126,55,66,.75);border-radius:50%;transition:.25s}.mouth-full .mouth-detail,.mouth-pout .mouth-detail{height:4.2%;background:rgba(171,79,94,.42);clip-path:ellipse(50% 42% at 50% 50%)}.mouth-smile .mouth-detail{height:4.5%;border-radius:0 0 50% 50%;border-bottom-width:3px}.mouth-serious .mouth-detail{height:1%;border-radius:0}
+.freckle-detail{display:none;position:absolute;left:38%;right:38%;top:47.5%;height:6%;background-image:radial-gradient(circle,#80513d 0 1px,transparent 1.6px);background-size:11px 9px;opacity:.58}.freckles-light .freckle-detail{display:block}.freckles-many .freckle-detail{display:block;left:34%;right:34%;opacity:.78;background-size:8px 7px}
+.ear-detail{position:absolute;top:39%;width:2.6%;height:8%;border:2px solid rgba(108,59,44,.35);border-radius:50%;opacity:.8;transition:.25s}.ear-detail.left{left:27%}.ear-detail.right{right:27%}.ears-small .ear-detail{transform:scale(.72)}.ears-large .ear-detail{transform:scale(1.25,1.35)}.ears-close .ear-detail.left{left:28.5%}.ears-close .ear-detail.right{right:28.5%}
