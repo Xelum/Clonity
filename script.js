@@ -99,7 +99,7 @@ function avatarMarkup(extra=''){if(extra.includes('face-only'))return `<div clas
 const HUMAN_MODELS={liam:'https://raw.githubusercontent.com/privacypuppet/privacypuppet/main/public/mpfb_models/liam-v2.glb',yuki:'https://raw.githubusercontent.com/privacypuppet/privacypuppet/main/public/mpfb_models/yuki-v2.glb',kofi:'https://raw.githubusercontent.com/privacypuppet/privacypuppet/main/public/mpfb_models/kofi-v2.glb'};
 const HUMAN_MODEL=HUMAN_MODELS.liam;
 const FACE_MODEL='models/facecap.glb?v=20260824-51';
-const HAIR_MODELS={brunette:'models/hair/brunette.glb?v=20260824-51',avaturn:'models/hair/avaturn.glb?v=20260824-51'};
+const HAIR_MODELS={brunette:'https://raw.githubusercontent.com/met4citizen/TalkingHead/main/avatars/brunette.glb',avaturn:'https://raw.githubusercontent.com/met4citizen/TalkingHead/main/avatars/avaturn.glb'};
 let humanMountId=0;
 let threeRuntime=null;
 function loadThreeRuntime(){if(!threeRuntime)threeRuntime=Promise.all([import('three'),import('three/addons/loaders/GLTFLoader.js'),import('three/addons/controls/OrbitControls.js'),import('three/addons/loaders/KTX2Loader.js'),import('three/addons/libs/meshopt_decoder.module.js')]).then(([THREE,{GLTFLoader},{OrbitControls},{KTX2Loader},{MeshoptDecoder}])=>({THREE,GLTFLoader,OrbitControls,KTX2Loader,MeshoptDecoder}));return threeRuntime}
