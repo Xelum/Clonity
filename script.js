@@ -56,43 +56,43 @@ function vectorFaceMarkupV47(){
  const browY=S.brows==='arched'?172:S.brows==='straight'?178:175,browW=S.brows==='bold'?7:5;
  const noseW=S.nose==='wide'?22:S.nose==='small'?11:16,noseL=S.nose==='defined'?57:S.nose==='small'?39:49;
  const mouthW=S.mouth==='full'?54:S.mouth==='smile'?60:S.mouth==='serious'?48:52,mouthH=S.mouth==='full'||S.mouth==='pout'?15:10;
- const freckles=S.freckles==='none'?'':\`<g fill="#85513d" opacity="\${S.freckles==='many'?'.72':'.48'}">\${[-46,-34,-22,22,34,46].map((x,i)=>\`<circle cx="\${250+x}" cy="\${263+(i%2)*5}" r="\${S.freckles==='many'?2.3:1.7}"/>\`).join('')}</g>\`;
+ const freckles=S.freckles==='none'?'':`<g fill="#85513d" opacity="${S.freckles==='many'?'.72':'.48'}">${[-46,-34,-22,22,34,46].map((x,i)=>`<circle cx="${250+x}" cy="${263+(i%2)*5}" r="${S.freckles==='many'?2.3:1.7}"/>`).join('')}</g>`;
  const hairStyle=normalizeHairStyle(S.hair);
  let hairSvg='';
- if(hairStyle==='shaved') hairSvg=\`<path d="M137 142 Q150 56 250 48 Q350 56 363 142 Q325 96 250 94 Q175 96 137 142Z" fill="\${hair}" opacity=".92"/>\`;
- else if(hairStyle==='ponytail') hairSvg=\`<path d="M132 158 Q132 48 250 42 Q368 48 368 158 Q335 104 250 96 Q165 104 132 158Z" fill="\${hair}"/><ellipse cx="377" cy="125" rx="34" ry="68" fill="\${hair}"/>\`;
- else if(hairStyle==='brunette') hairSvg=\`<path d="M122 170 Q114 48 250 35 Q386 48 378 170 Q349 111 317 94 Q290 76 258 90 Q215 67 181 99 Q147 116 122 170Z" fill="\${hair}"/><path d="M129 139 Q112 230 142 335" fill="none" stroke="\${hair}" stroke-width="34" stroke-linecap="round"/><path d="M371 139 Q388 230 358 335" fill="none" stroke="\${hair}" stroke-width="34" stroke-linecap="round"/>\`;
- else hairSvg=\`<path d="M128 158 Q132 54 248 42 Q350 46 372 140 Q330 105 289 112 Q278 76 246 103 Q204 78 177 116 Q151 117 128 158Z" fill="\${hair}"/><path d="M160 91 Q205 46 272 55 Q330 65 351 112 Q286 90 238 120 Q192 98 160 91Z" fill="\${hair}" opacity=".85"/>\`;
- return \`<div class="vector-face-v47 face-\${S.faceShape}">
- <svg viewBox="0 0 500 560" role="img" aria-label="Volto personalizzabile di \${S.name||'clone'}">
+ if(hairStyle==='shaved') hairSvg=`<path d="M137 142 Q150 56 250 48 Q350 56 363 142 Q325 96 250 94 Q175 96 137 142Z" fill="${hair}" opacity=".92"/>`;
+ else if(hairStyle==='ponytail') hairSvg=`<path d="M132 158 Q132 48 250 42 Q368 48 368 158 Q335 104 250 96 Q165 104 132 158Z" fill="${hair}"/><ellipse cx="377" cy="125" rx="34" ry="68" fill="${hair}"/>`;
+ else if(hairStyle==='brunette') hairSvg=`<path d="M122 170 Q114 48 250 35 Q386 48 378 170 Q349 111 317 94 Q290 76 258 90 Q215 67 181 99 Q147 116 122 170Z" fill="${hair}"/><path d="M129 139 Q112 230 142 335" fill="none" stroke="${hair}" stroke-width="34" stroke-linecap="round"/><path d="M371 139 Q388 230 358 335" fill="none" stroke="${hair}" stroke-width="34" stroke-linecap="round"/>`;
+ else hairSvg=`<path d="M128 158 Q132 54 248 42 Q350 46 372 140 Q330 105 289 112 Q278 76 246 103 Q204 78 177 116 Q151 117 128 158Z" fill="${hair}"/><path d="M160 91 Q205 46 272 55 Q330 65 351 112 Q286 90 238 120 Q192 98 160 91Z" fill="${hair}" opacity=".85"/>`;
+ return `<div class="vector-face-v47 face-${S.faceShape}">
+ <svg viewBox="0 0 500 560" role="img" aria-label="Volto personalizzabile di ${S.name||'clone'}">
   <defs>
-   <radialGradient id="skin47" cx="40%" cy="32%" r="68%"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".48" stop-color="\${skin}"/><stop offset="1" stop-color="#6f382b" stop-opacity=".42"/></radialGradient>
-   <linearGradient id="neck47" x1="0" x2="1"><stop stop-color="#5b2d23" stop-opacity=".35"/><stop offset=".48" stop-color="\${skin}"/><stop offset="1" stop-color="#5b2d23" stop-opacity=".35"/></linearGradient>
-   <radialGradient id="iris47"><stop offset="0" stop-color="#111"/><stop offset=".28" stop-color="#111"/><stop offset=".32" stop-color="\${eye}"/><stop offset=".82" stop-color="\${eye}"/><stop offset="1" stop-color="#111"/></radialGradient>
+   <radialGradient id="skin47" cx="40%" cy="32%" r="68%"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".48" stop-color="${skin}"/><stop offset="1" stop-color="#6f382b" stop-opacity=".42"/></radialGradient>
+   <linearGradient id="neck47" x1="0" x2="1"><stop stop-color="#5b2d23" stop-opacity=".35"/><stop offset=".48" stop-color="${skin}"/><stop offset="1" stop-color="#5b2d23" stop-opacity=".35"/></linearGradient>
+   <radialGradient id="iris47"><stop offset="0" stop-color="#111"/><stop offset=".28" stop-color="#111"/><stop offset=".32" stop-color="${eye}"/><stop offset=".82" stop-color="${eye}"/><stop offset="1" stop-color="#111"/></radialGradient>
    <filter id="shadow47"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".24"/></filter>
   </defs>
   <path d="M126 560 Q132 445 190 421 L310 421 Q368 445 374 560Z" fill="#101b36"/>
   <path d="M205 353 L195 450 Q250 488 305 450 L295 353Z" fill="url(#neck47)"/>
-  <ellipse cx="\${250-face.rx-8}" cy="244" rx="\${ear.rx}" ry="\${ear.ry}" fill="\${skin}" stroke="#733d31" stroke-opacity=".35" stroke-width="3"/>
-  <ellipse cx="\${250+face.rx+8}" cy="244" rx="\${ear.rx}" ry="\${ear.ry}" fill="\${skin}" stroke="#733d31" stroke-opacity=".35" stroke-width="3"/>
-  <path d="M\${250-face.rx} 200 Q\${250-face.rx-8} 94 250 82 Q\${250+face.rx+8} 94 \${250+face.rx} 200 L\${250+face.rx-8} 296 Q\${250+face.rx-18} 376 250 414 Q\${250-face.rx+18} 376 \${250-face.rx+8} 296Z" fill="url(#skin47)" filter="url(#shadow47)"/>
-  \${hairSvg}
-  <g fill="none" stroke="\${brow}" stroke-width="\${browW}" stroke-linecap="round">
-   <path d="M155 \${browY} Q190 \${browY-13} 219 \${browY+1}"/><path d="M281 \${browY+1} Q310 \${browY-13} 345 \${browY}"/>
+  <ellipse cx="${250-face.rx-8}" cy="244" rx="${ear.rx}" ry="${ear.ry}" fill="${skin}" stroke="#733d31" stroke-opacity=".35" stroke-width="3"/>
+  <ellipse cx="${250+face.rx+8}" cy="244" rx="${ear.rx}" ry="${ear.ry}" fill="${skin}" stroke="#733d31" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M${250-face.rx} 200 Q${250-face.rx-8} 94 250 82 Q${250+face.rx+8} 94 ${250+face.rx} 200 L${250+face.rx-8} 296 Q${250+face.rx-18} 376 250 414 Q${250-face.rx+18} 376 ${250-face.rx+8} 296Z" fill="url(#skin47)" filter="url(#shadow47)"/>
+  ${hairSvg}
+  <g fill="none" stroke="${brow}" stroke-width="${browW}" stroke-linecap="round">
+   <path d="M155 ${browY} Q190 ${browY-13} 219 ${browY+1}"/><path d="M281 ${browY+1} Q310 ${browY-13} 345 ${browY}"/>
   </g>
-  <g transform="translate(0 0) scale(\${eyeScale})" transform-origin="250 210">
-   <path d="M151 213 Q185 \${213-eyeShape.ry} 219 213 Q185 \${213+eyeShape.ry} 151 213Z" fill="#fff9f4" stroke="#593a34" stroke-width="3"/>
-   <path d="M281 213 Q315 \${213-eyeShape.ry} 349 213 Q315 \${213+eyeShape.ry} 281 213Z" fill="#fff9f4" stroke="#593a34" stroke-width="3"/>
+  <g transform="translate(0 0) scale(${eyeScale})" transform-origin="250 210">
+   <path d="M151 213 Q185 ${213-eyeShape.ry} 219 213 Q185 ${213+eyeShape.ry} 151 213Z" fill="#fff9f4" stroke="#593a34" stroke-width="3"/>
+   <path d="M281 213 Q315 ${213-eyeShape.ry} 349 213 Q315 ${213+eyeShape.ry} 281 213Z" fill="#fff9f4" stroke="#593a34" stroke-width="3"/>
    <circle cx="185" cy="213" r="13" fill="url(#iris47)"/><circle cx="315" cy="213" r="13" fill="url(#iris47)"/>
    <circle cx="185" cy="213" r="5" fill="#090b10"/><circle cx="315" cy="213" r="5" fill="#090b10"/>
    <circle cx="180" cy="208" r="3" fill="#fff"/><circle cx="310" cy="208" r="3" fill="#fff"/>
   </g>
-  <path d="M250 224 Q\${250-noseW} \${224+noseL*.65} \${250-noseW} \${224+noseL} Q250 \${236+noseL} \${250+noseW} \${224+noseL}" fill="none" stroke="#80483a" stroke-width="4" stroke-linecap="round"/>
-  <path d="M\${250-mouthW/2} 323 Q250 \${323-mouthH} \${250+mouthW/2} 323 Q250 \${323+mouthH} \${250-mouthW/2} 323Z" fill="#a9515d" stroke="#713845" stroke-width="2"/>
-  \${S.mouth==='smile'?'<path d="M220 323 Q250 344 280 323" fill="none" stroke="#fff" stroke-opacity=".68" stroke-width="3"/>':''}
-  \${freckles}
+  <path d="M250 224 Q${250-noseW} ${224+noseL*.65} ${250-noseW} ${224+noseL} Q250 ${236+noseL} ${250+noseW} ${224+noseL}" fill="none" stroke="#80483a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M${250-mouthW/2} 323 Q250 ${323-mouthH} ${250+mouthW/2} 323 Q250 ${323+mouthH} ${250-mouthW/2} 323Z" fill="#a9515d" stroke="#713845" stroke-width="2"/>
+  ${S.mouth==='smile'?'<path d="M220 323 Q250 344 280 323" fill="none" stroke="#fff" stroke-opacity=".68" stroke-width="3"/>':''}
+  ${freckles}
   <path d="M167 279 Q184 290 202 281 M298 281 Q316 290 333 279" fill="none" stroke="#7d4739" stroke-opacity=".2" stroke-width="7" stroke-linecap="round"/>
- </svg></div>\`}
+ </svg></div>`}
 }
 function avatarMarkup(extra=''){return `<div class="human-avatar avatar-2d vector-engine ${extra}" data-human-avatar data-avatar2d>${vectorFaceMarkupV47()}<div class="human-help">CLONITY FACE LAB · VECTOR</div></div>`}
 // MPFB human bases from PrivacyPuppet, MIT License © 2026 PrivacyPuppet.
