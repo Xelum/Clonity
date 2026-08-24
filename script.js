@@ -92,7 +92,7 @@ function vectorFaceMarkupV47(){
   ${S.mouth==='smile'?'<path d="M220 323 Q250 344 280 323" fill="none" stroke="#fff" stroke-opacity=".68" stroke-width="3"/>':''}
   ${freckles}
   <path d="M167 279 Q184 290 202 281 M298 281 Q316 290 333 279" fill="none" stroke="#7d4739" stroke-opacity=".2" stroke-width="7" stroke-linecap="round"/>
- </svg></div>`}
+ </svg></div>`
 }
 function avatarMarkup(extra=''){return `<div class="human-avatar avatar-2d vector-engine ${extra}" data-human-avatar data-avatar2d>${vectorFaceMarkupV47()}<div class="human-help">CLONITY FACE LAB · VECTOR</div></div>`}
 // MPFB human bases from PrivacyPuppet, MIT License © 2026 PrivacyPuppet.
