@@ -146,13 +146,15 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 .premium-engine{background:radial-gradient(circle at 50% 31%,#5975df 0,#24447f 39%,#102957 67%,#06142f 100%)}
 .premium-portrait{position:absolute;z-index:2;inset:6% 8% 0;overflow:hidden;transform:scaleX(var(--portrait));transform-origin:50% 56%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .premium-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:saturate(.95) contrast(1.015);user-select:none;pointer-events:none}
-.portrait-tint{position:absolute;inset:0;pointer-events:none;background:var(--skin-tint);opacity:.18;mix-blend-mode:color;-webkit-mask-image:var(--mask);mask-image:var(--mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain}
+.portrait-tint{position:absolute;inset:0;pointer-events:none;background:var(--skin-tint);opacity:.32;mix-blend-mode:color;-webkit-mask-image:var(--mask);mask-image:var(--mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;transition:background .25s,opacity .25s}
 .portrait-tint.skin{clip-path:ellipse(27% 30% at 50% 43%)}
-.portrait-tint.hair{background:var(--hair-tint);opacity:.34;clip-path:polygon(12% 0,88% 0,88% 31%,76% 42%,69% 27%,31% 27%,23% 43%,12% 31%)}
+.portrait-tint.hair{background:var(--hair-tint);opacity:.82;clip-path:polygon(12% 0,88% 0,88% 31%,76% 42%,69% 27%,31% 27%,23% 43%,12% 31%)}
 .kind-female .portrait-tint.hair{clip-path:polygon(8% 0,92% 0,96% 91%,72% 88%,66% 37%,34% 37%,27% 90%,5% 90%)}
 .kind-neutral .portrait-tint.hair{clip-path:polygon(14% 0,86% 0,87% 48%,68% 45%,65% 26%,35% 26%,30% 46%,13% 47%)}
-.eye-tint{position:absolute;top:var(--eye-y);width:3.2%;aspect-ratio:1;border-radius:50%;background:var(--eye-tint);mix-blend-mode:color;opacity:.82;transform:translate(-50%,-50%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.eye-tint{position:absolute;top:var(--eye-y);width:3.35%;aspect-ratio:1;border-radius:50%;background:var(--eye-tint);mix-blend-mode:color;opacity:.94;transform:translate(-50%,-50%) scale(var(--eye-scale,1),var(--eye-squish,1));box-shadow:inset 0 0 0 1px rgba(0,0,0,.24);transition:background .2s,transform .25s}
 .eye-tint.left{left:var(--eye-left)}.eye-tint.right{left:var(--eye-right)}
+.brow-tint{position:absolute;top:var(--brow-y);width:10%;height:1.25%;border-radius:60% 60% 35% 35%;background:var(--brow-tint);mix-blend-mode:color;opacity:.72;transform:translate(-50%,-50%) rotate(var(--brow-angle));filter:blur(.25px)}
+.brow-tint.left{left:var(--eye-left);--brow-angle:-6deg}.brow-tint.right{left:var(--eye-right);--brow-angle:6deg}
 .portrait-sheen{position:absolute;inset:7% 16% 25%;border-radius:45%;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,.12),transparent 30% 72%,rgba(4,14,40,.08));mix-blend-mode:soft-light}
 .premium-engine .human-help{z-index:5}.premium-engine:after{opacity:.35}
 @media(max-width:760px){.premium-portrait{inset:7% 3% 0}.portrait-tint.skin{clip-path:ellipse(29% 30% at 50% 43%)}}
