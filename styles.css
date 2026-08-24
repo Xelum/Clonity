@@ -196,3 +196,20 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 @keyframes facePartIn{from{opacity:0}to{opacity:1}}
 .modular-engine .human-help{z-index:12}.modular-engine:after{opacity:.22}
 @media(max-width:760px){.modular-face{inset:2% -3% 0}.modular-face .eyes{top:25.5%}.modular-face .hair{top:-1%}}
+
+/* Face Lab v40: componenti già ritagliati, nessuna sprite sheet. */
+.modular-face-v40{position:absolute;z-index:2;inset:1% 1% 0;overflow:hidden;transform-origin:50% 43%;transition:transform .28s ease}
+.modular-face-v40.face-round{transform:scaleX(1.055)}.modular-face-v40.face-square{transform:scaleX(1.09)}.modular-face-v40.face-heart{transform:scaleX(.97)}.modular-face-v40.face-long{transform:scaleX(.92)}
+.v40-base{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
+.v40-skin{position:absolute;inset:0;background:var(--skin);opacity:.38;mix-blend-mode:color;-webkit-mask:var(--base) center/contain no-repeat;mask:var(--base) center/contain no-repeat;pointer-events:none}
+.v40-part{position:absolute;display:block;object-fit:contain;pointer-events:none;user-select:none;animation:v40PartIn .28s cubic-bezier(.2,.8,.2,1) both}
+.v40-part.ears{z-index:3;left:27%;top:30.5%;width:46%;height:18%;animation-delay:.03s}
+.v40-part.eyes{z-index:5;left:33%;top:30%;width:34%;height:12%;filter:var(--eye-filter);animation-delay:.07s}
+.v40-part.eyes.size-small{transform:scale(.86)}.v40-part.eyes.size-large{transform:scale(1.1)}.v40-part.eyes.size-xlarge{transform:scale(1.18)}
+.v40-part.brows{z-index:6;left:33%;top:25.5%;width:34%;height:9%;filter:var(--brow-filter);animation-delay:.1s}
+.v40-part.nose{z-index:5;left:43%;top:37%;width:14%;height:18%;animation-delay:.13s}
+.v40-part.mouth{z-index:5;left:40%;top:53%;width:20%;height:11%;animation-delay:.16s}
+.v40-part.hair{z-index:8;left:24%;top:3%;width:52%;height:43%;filter:var(--hair-filter);animation-delay:.2s}
+.v40-freckles{display:none;position:absolute;z-index:7;left:37%;top:47%;width:26%;height:6%;background-image:radial-gradient(circle,#744634 0 1.3px,transparent 1.8px);background-size:11px 8px;opacity:.68}.v40-freckles.light,.v40-freckles.many{display:block}.v40-freckles.many{left:33%;width:34%;background-size:8px 7px;opacity:.88}
+@keyframes v40PartIn{from{opacity:0}to{opacity:1}}
+@media(max-width:760px){.modular-face-v40{inset:0 -4%}.v40-part.eyes{top:30%}.v40-part.hair{top:2%}}
