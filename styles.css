@@ -288,3 +288,6 @@ body,button,input{font-family:"Manrope",Arial,sans-serif}.hero-text h1 em,.big-c
 @keyframes curatedGaze{0%,20%,100%{transform:translateX(0);opacity:.38}42%{transform:translateX(8px);opacity:.62}68%{transform:translateX(-6px);opacity:.5}}
 @media(prefers-reduced-motion:reduce){.curated-avatar>img,.curated-avatar:before{animation:none}}
 @media(max-width:650px){.generated-avatar{height:350px;min-height:350px;padding:18px 15px 44px}.generated-avatar .curated-avatar{width:min(78vw,285px)}.generated-avatar>span{bottom:17px}.clone-result .result-copy{text-align:left}}
+
+/* Six-avatar collection layout */
+@media(min-width:1021px){.avatar-library-panel{padding:23px}.avatar-library-list{grid-template-columns:1fr 1fr;gap:8px}.avatar-choice{min-height:74px;padding:7px 30px 7px 7px;gap:9px}.avatar-choice img{width:58px;height:58px}.avatar-choice b{font-size:12px}.avatar-choice small{font-size:8px}.avatar-choice em{position:absolute;right:8px;top:7px;font-size:6px;padding:4px 5px}.avatar-choice>i{right:9px;bottom:8px;top:auto;transform:none;width:18px;height:18px}.library-note{margin-top:11px;padding-top:10px}}
